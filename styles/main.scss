@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+#__next {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+}
+#__next {
+  flex: 1 1 auto;
+  min-height: 100vh;
+}
+
+.files-page {
+  flex-direction: column;
+  select {
+    width: 130px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin: 5px;
+  }
+  button {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin: 5px;
+    &:disabled {
+      color: grey;
+      border: 1px solid grey;
+      cursor: default;
+    }
+  }
+}
